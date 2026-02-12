@@ -12,6 +12,9 @@ const app = express(); // สร้าง express app
 app.use(cors()); //มีไว้เพื่อให้ข้าม cors ได้
 app.use(express.json()); //มีไว้เพื่อให้รับ json ได้
 
+import bookRoute from './routes/bookRoutes.js' 
+app.use('/api/books', bookRoute);
+
 const PORT = process.env.PORT || 3000; // กำหนดพอร์ตจาก env หรือใช้ 3000 เป็นค่าเริ่มต้น
 
 // เริ่มเซิร์ฟเวอร์
