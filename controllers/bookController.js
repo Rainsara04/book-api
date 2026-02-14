@@ -10,8 +10,8 @@ export const addBook = async (req, res) => {
         [title, author, published_year] 
     );
     res.status(201).json(result.rows[0]);
-    } catch (err) {
-        return res.status(500).json({ message: "error: " + err });
+    } catch (error) {
+        return res.status(500).json({ message: "error: " + error });
     }
 };
 
